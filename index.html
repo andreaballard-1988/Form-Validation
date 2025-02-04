@@ -44,8 +44,31 @@
             <div class="card-footer">14 Days</div>
     </div>
     <script>
-        fuctionGuests():
-            
+        document.getElementById().addEventListener('submit', function(event){
+            event.preventDefault():
+            const form = event.target;
+        if (form.checkValidity()){
+            const name = document.getElementById('name').value;
+            const roomnumber = document.getElementById('roomnumber').value;
+            const stayduration = document.getElementById('input["number of days"]:checked').value;
+
+            document.getElementById('alertName').textContent = name;
+            document.getElementById('alertRoomNumber').textContent = RoomNumber;
+            document.getElementById('alertStayDuration').textContent = StayDuration;
+    
+
+            const alert = document.getElementById('formAlert');
+            alert.classlist.remove('d-none');
+
+            form.reset();
+            form.classlist.remove('was-validated');
+        } else {
+            form.classlist.add('was-validated');
+        }
+
+
+      });
+    
     </script>
 </body>
 </html>
